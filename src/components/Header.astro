@@ -1,0 +1,114 @@
+---
+import Instagram from "./Instagram.astro"
+import Facebook from "./Facebook.astro"
+// Header.astro
+---
+
+<header
+  class="bg-[url('/header.jpg')] bg-cover bg-center bg-no-repeat text-white font-thin flex flex-col items-center justify-between relative h-[300px] lg:h-[350px] p-4;"
+>
+  <!-- Titulo de la pagina -->
+  <div
+    class="left-auto absolute lg:-translate-y-2/4 lg:left-4 font-thin text-2xl lg:text-[50px] m-0 top-2/4 max-lg:hidden"
+  >
+    <a href="/">
+      <h3 class="p-4">HOLD´EM MARKETING</h3>
+    </a>
+  </div>
+  <!-- Logo de la pagina -->
+  <a href="/">
+    <img
+      class="absolute -translate-x-2/4 -translate-y-2/4 p-2 left-2/4 top-24 lg:top-2/4 h-[50px] lg:h-[250px] max-lg:hidden"
+      src="/logoSecundario.svg"
+      alt="Hold´em Marketing"
+    />
+    <img class="absolute -translate-x-2/4 -translate-y-2/4 p-2 left-2/4 top-24 lg:top-2/4 h-[300px] lg:h-[250px] lg:hidden " src="/logoPrincipal.svg" alt="Holdem marketing" />
+  </a>
+  <!-- Iconos -->
+  <div class="absolute flex gap-2 lg:right-2 lg:top-2 max-lg:bottom-8">
+    <button id="menu-toggle-open" class="lg:hidden">
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 6l16 0"></path>
+        <path d="M4 12l16 0"></path>
+        <path d="M4 18l16 0"></path>
+      </svg>
+    </button>
+    <Facebook />
+    <Instagram />
+  </div>
+
+  <nav
+    id="mobile-menu"
+    class="hidden lg:w-full lg:flex lg:mt-auto lg:justify-start max-lg:bg-[#2e2e2e] max-lg:z-10 max-lg:h-screen max-lg:w-screen"
+  >
+    <ul class="flex flex-col lg:flex-row lg:justify-center lg:m-0 lg:p-0">
+      <li class="lg:mr-20 last:mr-0 lg:hidden" id="menu-toggle-close">
+        <button class="text-white no-underline block px-4 py-2">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg
+          >
+        </button>
+      </li>
+      <li class="mb-4 lg:mr-20 last:mr-0">
+        <a
+          class="text-white no-underline block px-4 py-2 hover:bg-[#575757]"
+          href="/">NOSOTROS</a
+        >
+      </li>
+      <li class="mb-4 lg:mr-20 last:mr-0">
+        <a
+          class="text-white no-underline block px-4 py-2 hover:bg-[#575757]"
+          href="/services">SERVICIOS</a
+        >
+      </li>
+      <li class="mb-4 lg:mr-20 last:mr-0">
+        <a
+          class="text-white no-underline block px-4 py-2 hover:bg-[#575757]"
+          href="/packages">PAQUETES</a
+        >
+      </li>
+      <li class="mb-4 lg:mr-20 last:mr-0">
+        <a
+          class="text-white no-underline block px-4 py-2 hover:bg-[#575757]"
+          href="/portfolio">TRABAJOS</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+<script>
+  document
+    .getElementById("menu-toggle-open")
+    .addEventListener("click", function () {
+      var menu = document.getElementById("mobile-menu");
+      menu.classList.remove("hidden");
+    });
+
+  document
+    .getElementById("menu-toggle-close")
+    .addEventListener("click", function () {
+      var menu = document.getElementById("mobile-menu");
+      menu.classList.add("hidden");
+    });
+</script>
