@@ -1,41 +1,17 @@
 ---
-import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Mision from "../components/Mision.astro";
+import Team from "../components/team.astro";
+import MisionVision from "../components/MisionVision.astro";
 
 ---
 
 <Layout title="HOLD´EM MARKETING">
-  <Header />
   <main>
-    <section class="flex flex-col justify-center items-center mt-10 gap-4 flex-wrap lg:flex-row">
-
-      <Mision title="MISION" description="HOLD´EM se erige como una agencia de marketing comprometida con la excelencia profesional; ofrecemos soluciones, brindamos estrategias digitales de vanguardia para el posicionamiento de la marca en el panorama comercial y generamos oportunidades de negocio."/>      
-
-      <div class="text-center">
-        <img
-          class="max-lg:w-[300px]"
-          src="/fichaPoker.webp"
-          width="350px"
-          alt="pokerChip"
-        />
-      </div>
-
-      <Mision title="VISION" description="Consolidarnos como un centro que ofrece soluciones integrales y estratégicas, brindando siempre un servicio excepcional.">
-    </section>
-
-    <!-- Seccion del equipo -->
-    <section class="text-center px-0 py-8">
-      <h2 class="text-[2rem] mb-8">EQUIPO</h2>
-
-      <div class="flex flex-col justify-center items-center gap-4 lg:gap-[10%] flex-wrap lg:flex-row">
-        <Card image="/fichaPoker.webp" nombre="Richard" ocupacion="Direccion creativa RS" />
-        <Card image="/fichaPoker.webp" nombre="Eder" ocupacion="Marketing Digital RS" />
-        <Card image="/fichaPoker.webp" nombre="Jair" ocupacion="Desarrollo web RS" />
-      </div>
-    </section>
+    <Header />
+      <MisionVision />
+      <Team />
+    <Footer />
   </main>
-  <Footer />
 </Layout>
