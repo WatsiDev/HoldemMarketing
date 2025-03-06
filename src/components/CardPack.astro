@@ -16,7 +16,7 @@ const { title, description, content, price } = Astro.props;
       <!-- Overlay para mejorar la legibilidad del título -->
       <div class="absolute inset-0 bg-black opacity-50"></div>
       <div class="relative h-full flex items-center justify-center p-6">
-        <h2 class="text-3xl font-bold text-white">{title}</h2>
+        <h2 class="text-3xl font-bold text-white font-subtitle">{title}</h2>
       </div>
     </div>
 
@@ -25,11 +25,11 @@ const { title, description, content, price } = Astro.props;
         <p class="mb-4">
           {description}
         </p>
-        <ul class="list-disc list-inside mb-4">
+        <ul class="list-disc list-inside mb-4 font-description">
           {content.map((item) => (
             <li>{item}</li>
           ))}
         </ul>
-        <div class="text-2xl font-bold">{price}</div>
+        <div class="text-2xl font-bold font-price">{price}</div>
       </div>
   </div>
